@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';   // 👈 per <ion-button>, <ion-toolbar>, ecc.
+import { CommonModule } from '@angular/common'; // 👈 per *ngIf, *ngFor ecc.
+import { RouterModule } from '@angular/router'; // 👈 se usi routerLink
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    IonicModule,   // componenti Ionic
+    CommonModule,  // direttive Angular standard
+    RouterModule   // navigazione tra pagine
+  ]
 })
-export class HomePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class HomePage {}
