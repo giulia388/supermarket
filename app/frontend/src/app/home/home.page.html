@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Centro Estetico</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h2>Benvenuta nel nostro centro estetico!</h2>
+  <p>Scopri i trattamenti di bellezza e benessere.</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button expand="block" routerLink="/services">
+    Vedi i Servizi
+  </ion-button>
+
+  <ion-button expand="block" routerLink="/booking">
+    Prenota un Appuntamento
+  </ion-button>
+
+  <ion-button expand="block" routerLink="/contact">
+    Contattaci
+  </ion-button>
 </ion-content>
