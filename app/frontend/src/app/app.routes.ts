@@ -10,5 +10,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'prenotazione',
+    loadComponent: () => import('./pages/prenotazione/prenotazione.page').then( m => m.PrenotazionePage)
   }
+
 ];
