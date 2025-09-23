@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./home.page.scss'],
   standalone: true,
   imports: [
-    IonicModule,   // per ion-card, ion-button ecc.
-    CommonModule,  // per *ngIf, *ngFor ecc.
-    RouterModule   // per routerLink
+    IonicModule,   // include <ion-icon>, <ion-button>, <ion-grid>, ecc.
+    CommonModule,  
+    RouterModule   
   ]
 })
 export class HomePage {}
