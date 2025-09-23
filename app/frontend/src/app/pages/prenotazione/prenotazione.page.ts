@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-prenotazione',
   templateUrl: './prenotazione.page.html',
   styleUrls: ['./prenotazione.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
-export class PrenotazionePage implements OnInit {
+export class PrenotazionePage {
+  prenotazione = {
+    nome: '',
+    email: '',
+    servizio: '',
+    data: ''
+  };
 
-  constructor() { }
-
-  ngOnInit() {
+  confermaPrenotazione() {
+    console.log('Prenotazione inviata:', this.prenotazione);
+    alert('Prenotazione effettuata con successo!');
   }
-
 }

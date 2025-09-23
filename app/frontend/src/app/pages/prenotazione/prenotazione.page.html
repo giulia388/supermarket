@@ -1,13 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>prenotazione</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Prenotazione</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">prenotazione</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h2>Prenota un Appuntamento</h2>
+
+  <form (ngSubmit)="confermaPrenotazione()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="prenotazione.nome" name="nome" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="prenotazione.email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Servizio</ion-label>
+      <ion-select [(ngModel)]="prenotazione.servizio" name="servizio">
+        <ion-select-option value="hair">Hair + Color</ion-select-option>
+        <ion-select-option value="nails">Nails</ion-select-option>
+        <ion-select-option value="spa">Spa</ion-select-option>
+        <ion-select-option value="wax">Wax</ion-select-option>
+        <ion-select-option value="bridal">Bridal</ion-select-option>
+        <ion-select-option value="blowout">Blowout</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Data</ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="prenotazione.data" name="data"></ion-datetime>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" color="success">
+      Conferma Prenotazione
+    </ion-button>
+  </form>
 </ion-content>
