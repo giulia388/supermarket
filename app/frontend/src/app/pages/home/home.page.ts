@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';   // 👈 per <ion-button>, <ion-toolbar>, ecc.
-import { CommonModule } from '@angular/common'; // 👈 per *ngIf, *ngFor ecc.
-import { RouterModule } from '@angular/router'; // 👈 se usi routerLink
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router'; // 👈 se usi routerLink
   styleUrls: ['./home.page.scss'],
   standalone: true,
   imports: [
-    IonicModule,   // componenti Ionic
-    CommonModule,  // direttive Angular standard
-    RouterModule   // navigazione tra pagine
+    IonicModule,   // per ion-card, ion-button ecc.
+    CommonModule,  // per *ngIf, *ngFor ecc.
+    RouterModule   // per routerLink
   ]
 })
 export class HomePage {}
