@@ -35,3 +35,24 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+@import './theme/variables.scss';
+
+html, body, ion-app, ion-content, ion-title, ion-button, ion-card, ion-label {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+h1, h2, ion-title {
+  font-weight: 600; 
+}
+
+p, ion-button, ion-label {
+  font-weight: 800;
+}
+
+.small-text {
+  font-weight: 300; 
+  font-size: 0.9rem;
+}
+
