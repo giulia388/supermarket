@@ -15,5 +15,15 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  }
+  },
+  {
+  path: 'servizi/:serviceId',
+  loadComponent: () =>
+    import('./pages/service-detail/service-detail.page').then(m => m.ServiceDetailPage)
+},
+{
+  path: 'spa',
+  loadComponent: () =>
+    import('./pages/spa/spa.page').then(m => m.SpaPage)
+}
 ];
