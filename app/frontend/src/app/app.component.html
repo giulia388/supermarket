@@ -1,3 +1,17 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Centro Estetico</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Home</ion-button>
+      <ion-button routerLink="/prenotazione">Prenotazioni</ion-button>
+      <ion-button routerLink="/contatti">Contatti</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-router-outlet></ion-router-outlet>
