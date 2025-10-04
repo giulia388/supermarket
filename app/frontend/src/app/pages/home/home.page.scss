@@ -1,44 +1,57 @@
-/* HERO */
-.hero-slider {
-  height: 62vh;          /* altezza del banner */
-  display: block;        /* importante per i web components */
+.hero-slider-wrapper {
   position: relative;
+  height: 62vh;
+  margin-bottom: 1.5rem;
+}
+
+.hero-slider {
+  height: 100%;
+  width: 100%;
+  display: block;
   z-index: 0;
-  margin-bottom: 1.5rem; /* separazione dalle immagini statiche */
 }
 
 .hero-banner {
   position: relative;
   width: 100%;
   height: 100%;
-  background-size: cover;      /* immagine copre tutto */
-  background-position: center; /* centrata */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.42); /* scurisci l’immagine per leggere il testo */
+  background: rgba(0, 0, 0, 0.42);
 }
 
+/* Testo statico sopra */
 .hero-text {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  z-index: 2;
 
-  p { margin: 0 0 .4rem; font-size: 1.05rem; }
-  h1 { margin: .2rem 0 .6rem; font-size: 2rem; font-weight: 700; }
+  p {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+  }
+
+  h1 {
+    margin: 0.2rem 0 0.6rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
 }
 
 .hero-btn {
-  --background: #73a6ad; /* la tua palette */
+  --background: #73a6ad;
   --color: #fff;
   --border-radius: 8px;
-  padding: .5rem 1.25rem;
+  padding: 0.5rem 1.25rem;
 }
 
 /* IMMAGINI STATICHE */
@@ -54,26 +67,44 @@
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
   }
 }
 
-/* Titolo sezione */
 .services-title {
   text-align: center;
   font-weight: 600;
   margin: 1rem 0 1.2rem;
 }
 
-/* Griglia servizi */
 .service {
   text-align: center;
 
-  img { width: 72px; height: 72px; }
-  p   { margin-top: .5rem; font-weight: 500; }
+  img {
+    width: 72px;
+    height: 72px;
+  }
+  p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-slider { height: 48vh; }
-  .static-images img { width: 31%; height: 120px; }
+  .hero-slider-wrapper {
+    height: 48vh;
+  }
+
+  .static-images img {
+    width: 31%;
+    height: 120px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
 }

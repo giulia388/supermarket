@@ -6,30 +6,34 @@
 
 <ion-content fullscreen>
 
-  <!-- HERO SLIDESHOW: immagini di sfondo che cambiano -->
-  <swiper-container
-    class="hero-slider"
-    slides-per-view="1"
-    speed="800"
-    loop="true"
-    autoplay-delay="3500"
-    autoplay-disable-on-interaction="false"
-  >
-    <ng-container *ngFor="let img of heroImages">
-      <swiper-slide>
-        <div class="hero-banner" [style.background-image]="'url(' + img + ')'">
-          <div class="overlay"></div>
-          <div class="hero-text">
-            <p>Benvenuta nel nostro centro di bellezza e benessere</p>
-            <h1>Beauty Centre Spa</h1>
-            <ion-button routerLink="/prenotazione" class="hero-btn">
-              PRENOTA UN APPUNTAMENTO
-            </ion-button>
+  <!-- HERO SLIDESHOW: solo immagini che scorrono -->
+  <div class="hero-slider-wrapper">
+    <swiper-container
+      class="hero-slider"
+      slides-per-view="1"
+      speed="800"
+      loop="true"
+      autoplay-delay="3500"
+      autoplay-disable-on-interaction="false"
+    >
+      <ng-container *ngFor="let img of heroImages">
+        <swiper-slide>
+          <div class="hero-banner" [style.background-image]="'url(' + img + ')'">
+            <div class="overlay"></div>
           </div>
-        </div>
-      </swiper-slide>
-    </ng-container>
-  </swiper-container>
+        </swiper-slide>
+      </ng-container>
+    </swiper-container>
+
+    <!-- TESTO STATICO SOPRA -->
+    <div class="hero-text">
+      <p>Benvenuta nel nostro centro di bellezza e benessere</p>
+      <h1>Beauty Centre Spa</h1>
+      <ion-button routerLink="/prenotazione" class="hero-btn">
+        PRENOTA UN APPUNTAMENTO
+      </ion-button>
+    </div>
+  </div>
 
   <!-- 3 IMMAGINI STATICHE SOTTO -->
   <div class="static-images">
