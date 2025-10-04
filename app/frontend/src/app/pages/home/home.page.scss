@@ -1,51 +1,79 @@
-ion-content {
-  --background: #ffffff; // sfondo beige chiaro
-  font-family: 'Poppins', sans-serif;
+/* HERO */
+.hero-slider {
+  height: 62vh;          /* altezza del banner */
+  display: block;        /* importante per i web components */
+  position: relative;
+  z-index: 0;
+  margin-bottom: 1.5rem; /* separazione dalle immagini statiche */
 }
 
-.hero {
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;      /* immagine copre tutto */
+  background-position: center; /* centrata */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.42); /* scurisci l’immagine per leggere il testo */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  margin: 2rem 0;
+  color: #fff;
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: #555;
-    margin-bottom: 1rem;
-  }
+  p { margin: 0 0 .4rem; font-size: 1.05rem; }
+  h1 { margin: .2rem 0 .6rem; font-size: 2rem; font-weight: 700; }
 }
 
-.hero ion-button {
-  max-width: 250px;   
-  margin: 0 auto;     
-  display: block;
-  font-size: 1rem;    
-  border-radius: 8px; 
+.hero-btn {
+  --background: #73a6ad; /* la tua palette */
+  --color: #fff;
+  --border-radius: 8px;
+  padding: .5rem 1.25rem;
 }
 
-
-.services-title {
-  text-align: center;
-  margin: 2rem 0 1rem;
-  font-weight: 600;
-}
-
-.service {
-  text-align: center;
+/* IMMAGINI STATICHE */
+.static-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
   margin-bottom: 2rem;
 
-  ion-icon {
-    font-size: 64px;
-    color: var(--ion-color-primary);
-    display: block;
-    margin: 0 auto 0.5rem;
+  img {
+    width: 32%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
   }
+}
 
-  p {
-    font-weight: 500;
-  }
+/* Titolo sezione */
+.services-title {
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem 0 1.2rem;
+}
+
+/* Griglia servizi */
+.service {
+  text-align: center;
+
+  img { width: 72px; height: 72px; }
+  p   { margin-top: .5rem; font-weight: 500; }
+}
+
+@media (max-width: 768px) {
+  .hero-slider { height: 48vh; }
+  .static-images img { width: 31%; height: 120px; }
 }

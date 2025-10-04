@@ -1,41 +1,29 @@
 :root {
-  /** Primary - Lavender **/
-  --ion-color-primary: #b39ddb;
-  --ion-color-primary-rgb: 179, 157, 219;
+  --ion-color-primary: #9B97B2;
+  --ion-color-primary-rgb: 155, 151, 178;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #9c88bd;
-  --ion-color-primary-tint: #c2a8e0;
+  --ion-color-primary-shade: #8986a0;
+  --ion-color-primary-tint: #aaa5c0;
 
-  /** Secondary - Mint **/
-  --ion-color-secondary: #a5d6a7;
-  --ion-color-secondary-rgb: 165, 214, 167;
-  --ion-color-secondary-contrast: #000000;
-  --ion-color-secondary-contrast-rgb: 0, 0, 0;
-  --ion-color-secondary-shade: #90ba92;
-  --ion-color-secondary-tint: #b7dfb9;
+  --ion-color-secondary: #73A6AD;
+  --ion-color-secondary-rgb: 115, 166, 173;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #658f95;
+  --ion-color-secondary-tint: #85b4ba;
 
-  /** Tertiary - Peach **/
-  --ion-color-tertiary: #ffccbc;
-  --ion-color-tertiary-rgb: 255, 204, 188;
+  --ion-color-tertiary: #D8A7CA;
+  --ion-color-tertiary-rgb: 216, 167, 202;
   --ion-color-tertiary-contrast: #000000;
   --ion-color-tertiary-contrast-rgb: 0, 0, 0;
-  --ion-color-tertiary-shade: #e0b4a5;
-  --ion-color-tertiary-tint: #ffd1c4;
+  --ion-color-tertiary-shade: #be92b2;
+  --ion-color-tertiary-tint: #dfb5d4;
 
-  /** Success - Soft Aqua **/
-  --ion-color-success: #80deea;
-  --ion-color-success-rgb: 128, 222, 234;
-  --ion-color-success-contrast: #000000;
-  --ion-color-success-contrast-rgb: 0, 0, 0;
-  --ion-color-success-shade: #70c3ce;
-  --ion-color-success-tint: #99e3ee;
+  --ion-background-color: #ECEAE0;
 
-  /** Warning - Pastel Yellow **/
-  --ion-color-warning: #fff59d;
-  --ion-color-warning-rgb: 255, 245, 157;
-  --ion-color-warning-contrast: #000000;
-  --ion-color-warning-contrast-rgb: 0, 0, 0;
-  --ion-color-warning-shade: #e0d787;
-  --ion-color-warning-tint: #fff7ac;
+  --ion-color-light: #C7B8EA;
+  --ion-color-light-rgb: 199, 184, 234;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
 }

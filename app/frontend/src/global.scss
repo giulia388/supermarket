@@ -39,6 +39,8 @@
 
 @import './theme/variables.scss';
 
+@import 'swiper/swiper-bundle.css';
+
 html, body, ion-app, ion-content, ion-title, ion-button, ion-card, ion-label {
   font-family: 'Poppins', sans-serif !important;
 }

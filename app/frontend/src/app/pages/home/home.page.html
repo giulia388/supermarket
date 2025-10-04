@@ -4,14 +4,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <!-- Hero -->
-  <div class="hero">
-    <h2>Esperienza di bellezza e benessere</h2>
-    <p>Trattamenti esclusivi nel nostro centro estetico</p>
-    <ion-button expand="block" routerLink="/prenotazione">
-      Prenota un Appuntamento!
-    </ion-button>
+<ion-content fullscreen>
+
+  <!-- HERO SLIDESHOW: immagini di sfondo che cambiano -->
+  <swiper-container
+    class="hero-slider"
+    slides-per-view="1"
+    speed="800"
+    loop="true"
+    autoplay-delay="3500"
+    autoplay-disable-on-interaction="false"
+  >
+    <ng-container *ngFor="let img of heroImages">
+      <swiper-slide>
+        <div class="hero-banner" [style.background-image]="'url(' + img + ')'">
+          <div class="overlay"></div>
+          <div class="hero-text">
+            <p>Benvenuta nel nostro centro di bellezza e benessere</p>
+            <h1>Beauty Centre Spa</h1>
+            <ion-button routerLink="/prenotazione" class="hero-btn">
+              PRENOTA UN APPUNTAMENTO
+            </ion-button>
+          </div>
+        </div>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+
+  <!-- 3 IMMAGINI STATICHE SOTTO -->
+  <div class="static-images">
+    <img src="assets/images/slide1.jpg" alt="Static 1" />
+    <img src="assets/images/slide1.jpg" alt="Static 2" />
+    <img src="assets/images/slide1.jpg" alt="Static 3" />
   </div>
 
   <!-- Services -->
@@ -19,34 +43,21 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col size="6" size-md="4" class="service">
-        <a [routerLink]="['/servizi', 'hair']">
-          <ion-icon name="cut-outline"></ion-icon>
-          <p>Hair + Color</p>
-        </a>
-      </ion-col>
-      <ion-col size="6" size-md="4" class="service">
-        <ion-icon name="color-palette-outline"></ion-icon>
-        <p>Nails</p>
-      </ion-col>
-      <ion-col size="6" size-md="4" class="service">
+      <ion-col size="4" class="service">
         <a [routerLink]="['/spa']">
-            <ion-icon name="sparkles-outline"></ion-icon>
-           <p>Spa</p>
+          <img src="assets/icons/spa.svg" alt="Spa" />
+          <p>Spa</p>
         </a>
       </ion-col>
-      <ion-col size="6" size-md="4" class="service">
-        <ion-icon name="eyedrop-outline"></ion-icon>
-        <p>Wax</p>
+      <ion-col size="4" class="service">
+        <img src="assets/icons/nails.svg" alt="Nails" />
+        <p>Unghie</p>
       </ion-col>
-      <ion-col size="6" size-md="4" class="service">
-        <ion-icon name="heart-outline"></ion-icon>
-        <p>Bridal</p>
-      </ion-col>
-      <ion-col size="6" size-md="4" class="service">
-        <ion-icon name="flash-outline"></ion-icon>
-        <p>Blowout</p>
+      <ion-col size="4" class="service">
+        <img src="assets/icons/wax.svg" alt="Wax" />
+        <p>Ceretta</p>
       </ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>
