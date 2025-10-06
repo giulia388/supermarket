@@ -4,41 +4,60 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<!-- abilita eventi di scroll su IonContent -->
+<ion-content class="ion-no-padding"
+             [scrollEvents]="true"
+             (ionScroll)="onScroll($event)">
 
-  <!-- HERO BANNER A TUTTA LARGHEZZA -->
-  <div class="spa-hero">
-    <img src="assets/images/services/massage.jpg" alt="Massage Banner" />
+  <!-- HERO con immagine di sfondo + testo fisso -->
+  <section #hero class="spa-hero">
     <div class="overlay"></div>
     <div class="hero-text">
       <p>RELAX ASSICURATO</p>
       <h1>SERVIZI SPA</h1>
     </div>
+  </section>
+
+  <!-- Spazio tra banner e servizi -->
+  <div class="hero-gap"></div>
+
+    <!-- SEZIONE SERVIZI -->
+<section class="services-container">
+  <div class="service-block">
+    <h4 class="category">MASSAGGI</h4>
+    <h3>RILASSANTE</h3>
+    <p>Massaggio completo corpo per il massimo relax</p>
+    <p><strong>30 minuti — €60</strong></p>
+    <p><strong>60 minuti — €90</strong></p>
   </div>
 
-  <!-- SEZIONE SERVIZI -->
-  <div class="services-container">
-    <div class="service-block">
-      <h3>Massaggi</h3>
-      <p><strong>Top Massaggio</strong></p>
-      <p><em>20 minuti</em> — €70</p>
-    </div>
+  <div class="divider"></div>
 
-    <div class="divider"></div>
-
-    <div class="service-block">
-      <h3>Corpo</h3>
-      <p><strong>Trattamento Idratante</strong></p>
-      <p><em>30 minuti</em> — €60</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="service-block">
-      <h3>Viso</h3>
-      <p><strong>Maschera Illuminante</strong></p>
-      <p><em>25 minuti</em> — €50</p>
-    </div>
+  <div class="service-block">
+    <h4 class="category">CORPO</h4>
+    <h3>TRATTAMENTI IDRATANTI</h3>
+    <p>Per una pelle morbida e levigata</p>
+    <p><strong>45 minuti — €70</strong></p>
   </div>
 
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">VISO</h4>
+    <h3>MASCHERA ILLUMINANTE</h3>
+    <p>Rigenera e illumina la pelle del viso</p>
+    <p><strong>25 minuti — €50</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">BENESSERE</h4>
+    <h3>TRATTAMENTO AROMATICO</h3>
+    <p>Un’esperienza multisensoriale rilassante</p>
+    <p><strong>40 minuti — €80</strong></p>
+  </div>
+  </section>
+
+  
 </ion-content>
