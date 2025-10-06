@@ -1,61 +1,105 @@
-.subtitle {
-  text-align: center;
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: #555;
+/* BANNER */
+.spa-hero {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
 }
 
-.page-title {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 2rem;
+.spa-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Contenitore principale */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero-text p {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  letter-spacing: 6px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* SERVIZI */
 .services-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: stretch;
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  border-radius: 0;
+  margin: 3rem 0 0; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 2rem 0;
   flex-wrap: wrap;
 }
 
-/* Singola sezione */
-.service-section {
+.service-block {
   flex: 1;
   text-align: center;
-  padding: 1rem;
-  min-width: 200px;
-
-  h3 {
-    font-weight: 600;
-    margin-bottom: 0.6rem;
-  }
-
-  p {
-    margin: 0.3rem 0;
-  }
+  padding: 0 2rem;
 }
 
 .divider {
   width: 1px;
-  background-color: #ddd;
-  margin: 0 1rem;
+  background: #ddd;
+  margin: 0 0.5rem;
 }
 
-/* Responsive */
+.service-block h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  color: #333;
+  border-bottom: 2px solid #d8a7ca;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.service-block p {
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+
   .services-container {
     flex-direction: column;
-    align-items: center;
+    margin: 2rem 0 0; /* meno spazio su mobile */
   }
 
   .divider {
-    width: 80%;
+    width: 100%;
     height: 1px;
-    background-color: #ddd;
     margin: 1rem 0;
   }
 }
