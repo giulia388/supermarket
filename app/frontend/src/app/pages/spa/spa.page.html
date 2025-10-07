@@ -4,13 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- abilita eventi di scroll su IonContent -->
-<ion-content class="ion-no-padding"
-             [scrollEvents]="true"
-             (ionScroll)="onScroll($event)">
+<ion-content (ionScroll)="onScroll($event)" scrollEvents="true" fullscreen>
 
-  <!-- HERO con immagine di sfondo + testo fisso -->
-  <section #hero class="spa-hero">
+  <section #hero
+           class="service-hero"
+           [style.backgroundImage]="'url(assets/images/services/massage.jpg)'">
     <div class="overlay"></div>
     <div class="hero-text">
       <p>RELAX ASSICURATO</p>

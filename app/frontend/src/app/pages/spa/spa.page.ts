@@ -3,27 +3,23 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-spa',
+  selector: 'app-spa', 
   standalone: true,
-  templateUrl: './spa.page.html',
+  templateUrl: './spa.page.html', 
   styleUrls: ['./spa.page.scss'],
   imports: [IonicModule, CommonModule]
 })
 export class SpaPage {
-  @ViewChild('hero', { static: true }) hero!: ElementRef<HTMLDivElement>;
+  @ViewChild('hero', { static: true }) hero!: ElementRef<HTMLElement>;
 
-  // velocità dell'effetto (più alto = più movimento)
-  private readonly speed = 0.30;
+  private readonly desktopSpeed = 0.30;
+  private readonly mobileSpeed = 0.12;
 
-  // sposto solo lo sfondo (la scritta resta ferma)
   onScroll(ev: CustomEvent) {
-    // solo desktop
-    if (!window.matchMedia('(min-width: 769px)').matches) return;
-
     const y = (ev as any).detail?.scrollTop ?? 0;
-    // calcolo offset (limito per non far “saltare” l’immagine)
-    const offset = Math.max(-180, Math.min(180, -(y * this.speed)));
-
+    const isDesktop = matchMedia('(min-width: 769px)').matches;
+    const speed = isDesktop ? this.desktopSpeed : this.mobileSpeed;
+    const offset = Math.max(-180, Math.min(180, -(y * speed)));
     this.hero.nativeElement.style.setProperty('--bg-y', `${offset}px`);
   }
 }
