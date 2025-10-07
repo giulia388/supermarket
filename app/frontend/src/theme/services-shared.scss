@@ -1,21 +1,28 @@
 /* =============================
-   HERO CONDIVISO (Parallax)
+   HERO CONDIVISO (Parallax + Frame fisso)
 ============================= */
 .service-hero {
-  --bg-y: 0px;         /* offset controllato da TS */
-  --focusY: 65%;       /* punto focale verticale (modificabile per pagina) */
-  background-image: none; /* ogni pagina imposta la sua */
-  background-size: cover;
+  --bg-y: 0px;              /* offset dinamico via TypeScript */
+  --focusY: 65%;            /* punto focale verticale personalizzabile per ogni pagina */
+  background-image: none;   /* ogni pagina imposta la sua */
+  
+  /* 🔹 Mantiene la stessa inquadratura su ogni schermo */
+  background-size: 1900px auto;  /* larghezza fissa per un frame stabile */
   background-repeat: no-repeat;
   background-position: center calc(var(--focusY) + var(--bg-y));
-  background-attachment: scroll;
+  background-attachment: scroll; /* compatibile con iOS e Android */
+  will-change: background-position;
 
   position: relative;
   height: 50vh;
   overflow: hidden;
+
+  /* Effetto bianco e nero */
+  filter: grayscale(100%);
+  transition: background-position 0.2s ease-out, filter 0.8s ease;
 }
 
-/* Overlay scuro */
+/* Overlay scuro per migliorare contrasto testo */
 .service-hero .overlay {
   position: absolute;
   inset: 0;
@@ -48,21 +55,48 @@
   font-size: 2.4rem;
 }
 
+/* Piccolo distacco sotto */
 .hero-gap {
   height: 1.75rem;
 }
 
-/* Su desktop e mobile stesso effetto (solo cambia intensità via TS) */
+/* =============================
+   ADATTAMENTO RESPONSIVO
+============================= */
+
+/* Desktop: parallax più ampio */
 @media (min-width: 769px) {
   .service-hero {
-    will-change: background-position;
+    background-size: 1900px auto;
   }
 }
 
-@media (max-width: 768px) {
+/* Laptop medi */
+@media (max-width: 1200px) {
   .service-hero {
+    background-size: 1600px auto;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .service-hero {
+    background-size: 1200px auto;
     height: 45vh;
     background-position: center calc(var(--focusY) + var(--bg-y));
+  }
+
+  .service-hero .hero-text h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .service-hero {
+    background-size: 950px auto;
+    background-position: center calc(var(--focusY) + var(--bg-y));
+    height: 45vh;
   }
 
   .service-hero .hero-text h1 {
@@ -70,6 +104,7 @@
     letter-spacing: 0.3rem;
   }
 }
+
 
 /* =============================
    SEZIONE SERVIZI
@@ -129,7 +164,7 @@
   color: #222;
 }
 
-/* Responsive */
+/* Responsive per la sezione servizi */
 @media (max-width: 1024px) {
   .services-container {
     flex-wrap: wrap;
