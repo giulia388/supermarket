@@ -1,13 +1,169 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>unghie</ion-title>
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Unghie</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">unghie</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content (ionScroll)="onScroll($event)" scrollEvents="true" fullscreen>
+
+  <section #hero
+           class="service-hero"
+           [style.backgroundImage]="'url(assets/images/services/nails.jpg)'">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <p>RELAX ASSICURATO</p>
+      <h1>SERVIZI SPA</h1>
+    </div>
+  </section>
+
+  <!-- Spazio tra banner e servizi -->
+  <div class="hero-gap"></div>
+
+    <!-- SEZIONE SERVIZI -->
+<section class="services-container">
+  <div class="service-block">
+    <h4 class="category">MASSAGGI</h4>
+    <h3>RILASSANTE</h3>
+    <p>Massaggio completo corpo per il massimo relax</p>
+    <p><strong>30 minuti — €60</strong></p>
+    <p><strong>60 minuti — €90</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">CORPO</h4>
+    <h3>TRATTAMENTI IDRATANTI</h3>
+    <p>Per una pelle morbida e levigata</p>
+    <p><strong>45 minuti — €70</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">VISO</h4>
+    <h3>MASCHERA ILLUMINANTE</h3>
+    <p>Rigenera e illumina la pelle del viso</p>
+    <p><strong>25 minuti — €50</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">BENESSERE</h4>
+    <h3>TRATTAMENTO AROMATICO</h3>
+    <p>Un’esperienza multisensoriale rilassante</p>
+    <p><strong>40 minuti — €80</strong></p>
+  </div>
+  </section>
+
+  <section class="services-container">
+  <div class="service-block">
+    <h4 class="category">MASSAGGI</h4>
+    <h3>RILASSANTE</h3>
+    <p>Massaggio completo corpo per il massimo relax</p>
+    <p><strong>30 minuti — €60</strong></p>
+    <p><strong>60 minuti — €90</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">CORPO</h4>
+    <h3>TRATTAMENTI IDRATANTI</h3>
+    <p>Per una pelle morbida e levigata</p>
+    <p><strong>45 minuti — €70</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">VISO</h4>
+    <h3>MASCHERA ILLUMINANTE</h3>
+    <p>Rigenera e illumina la pelle del viso</p>
+    <p><strong>25 minuti — €50</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">BENESSERE</h4>
+    <h3>TRATTAMENTO AROMATICO</h3>
+    <p>Un’esperienza multisensoriale rilassante</p>
+    <p><strong>40 minuti — €80</strong></p>
+  </div>
+  </section>
+
+  <section class="services-container">
+  <div class="service-block">
+    <h4 class="category">MASSAGGI</h4>
+    <h3>RILASSANTE</h3>
+    <p>Massaggio completo corpo per il massimo relax</p>
+    <p><strong>30 minuti — €60</strong></p>
+    <p><strong>60 minuti — €90</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">CORPO</h4>
+    <h3>TRATTAMENTI IDRATANTI</h3>
+    <p>Per una pelle morbida e levigata</p>
+    <p><strong>45 minuti — €70</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">VISO</h4>
+    <h3>MASCHERA ILLUMINANTE</h3>
+    <p>Rigenera e illumina la pelle del viso</p>
+    <p><strong>25 minuti — €50</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">BENESSERE</h4>
+    <h3>TRATTAMENTO AROMATICO</h3>
+    <p>Un’esperienza multisensoriale rilassante</p>
+    <p><strong>40 minuti — €80</strong></p>
+  </div>
+  </section>
+  <section class="services-container">
+  <div class="service-block">
+    <h4 class="category">MASSAGGI</h4>
+    <h3>RILASSANTE</h3>
+    <p>Massaggio completo corpo per il massimo relax</p>
+    <p><strong>30 minuti — €60</strong></p>
+    <p><strong>60 minuti — €90</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">CORPO</h4>
+    <h3>TRATTAMENTI IDRATANTI</h3>
+    <p>Per una pelle morbida e levigata</p>
+    <p><strong>45 minuti — €70</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">VISO</h4>
+    <h3>MASCHERA ILLUMINANTE</h3>
+    <p>Rigenera e illumina la pelle del viso</p>
+    <p><strong>25 minuti — €50</strong></p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="service-block">
+    <h4 class="category">BENESSERE</h4>
+    <h3>TRATTAMENTO AROMATICO</h3>
+    <p>Un’esperienza multisensoriale rilassante</p>
+    <p><strong>40 minuti — €80</strong></p>
+  </div>
+  </section>
 </ion-content>
