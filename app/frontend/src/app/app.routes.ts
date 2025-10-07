@@ -25,13 +25,20 @@ export const routes: Routes = [
         (m) => m.ServiceDetailPage
       ),
   },
-  {
+ {
     path: 'spa',
     loadComponent: () =>
       import('./pages/spa/spa.page').then((m) => m.SpaPage),
-  },  {
-    path: 'unghie',
-    loadComponent: () => import('./pages/unghie/unghie.page').then( m => m.UnghiePage)
   },
+  {
+    path: 'unghie',
+    loadComponent: () =>
+      import('./pages/unghie/unghie.page').then((m) => m.UnghiePage),
+  },
+  {
+    path: 'ceretta',
+    loadComponent: () =>
+      import('./pages/ceretta/ceretta.page').then((m) => m.CerettaPage),
+  }
 
 ];

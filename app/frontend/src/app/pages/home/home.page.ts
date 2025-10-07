@@ -15,8 +15,8 @@ export class HomePage {
   // Metti qui le immagini del BANNER (di sfondo) in slideshow.
   // Se per ora hai solo "spa-banner.jpg", duplicala 3 volte nella lista:
   heroImages = [
-    'assets/images/spa-banner.jpg',
-    'assets/images/spa-banner.jpg',
-    'assets/images/spa-banner.jpg',
+    'assets/images/spa-banner1.jpg',
+    'assets/images/spa-banner2.jpg',
+    'assets/images/spa-banner1.jpg',
   ];
 }
