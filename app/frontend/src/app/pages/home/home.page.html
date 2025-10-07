@@ -5,7 +5,6 @@
 </ion-header>
 
 <ion-content fullscreen>
-
   <!-- HERO SLIDESHOW: solo immagini che scorrono -->
   <div class="hero-slider-wrapper">
     <swiper-container
@@ -18,7 +17,10 @@
     >
       <ng-container *ngFor="let img of heroImages">
         <swiper-slide>
-          <div class="hero-banner" [style.background-image]="'url(' + img + ')'">
+          <div
+            class="hero-banner"
+            [style.background-image]="'url(' + img + ')'"
+          >
             <div class="overlay"></div>
           </div>
         </swiper-slide>
@@ -47,23 +49,24 @@
         </a>
       </ion-col>
       <ion-col size="4" class="service">
-        <img src="assets/icons/nails.svg" alt="Nails" />
-        <p>Unghie</p>
+        <a [routerLink]="['/unghie']">
+          <img src="assets/icons/nails.svg" alt="Nails" />
+          <p>Unghie</p>
+        </a>
       </ion-col>
       <ion-col size="4" class="service">
-        <img src="assets/icons/wax.svg" alt="Wax" />
-        <p>Ceretta</p>
+        <a [routerLink]="['/ceretta']">
+          <img src="assets/icons/wax.svg" alt="Wax" />
+          <p>Ceretta</p>
+        </a>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  
   <!-- 3 IMMAGINI STATICHE SOTTO -->
   <div class="static-images">
     <img src="assets/images/slide1.jpg" alt="Static 1" />
     <img src="assets/images/slide1.jpg" alt="Static 2" />
     <img src="assets/images/slide1.jpg" alt="Static 3" />
   </div>
-
-
 </ion-content>
